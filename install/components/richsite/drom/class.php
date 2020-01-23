@@ -66,7 +66,7 @@ Class Drom{
             else{
                 $offer = $offers->addChild('offer');
                 $offer->addAttribute("id", $key);
-                $name = $offer->addChild("name", $value["name"]);
+                $name = $offer->addChild("name", htmlspecialchars($value["name"]));
                 $desc = $offer->addChild("description", htmlspecialchars($value["description"]));
                 $price = $offer->addChild("price", $value["price"]);
                 $currency = $offer->addChild("currencyId", $currency);
